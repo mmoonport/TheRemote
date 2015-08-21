@@ -1,0 +1,87 @@
+***NOTE: The term "media" will be used in replacement of movies, ebooks, music, games, applications ect
+
+Capabilities
+-------------
+
+We need to have a workflow systems with rules about how an asset is guided through the system 
+*** This may be a nice stub for plugins that can be added to the workflow. ***
+***	Be mindful of plugins when writing this ***
+
+
+
+
+Folder Watching
+We need to have the ability for users to specify folders that they want to watch for certain activites.
+
+Examples:
+
+Watch my music download folder for new files and when you do run my covert and get all metadata on it and move the files from there to my permanant music collecion
+
+Watch my movies dowload folder for new files and run the convert-to-mp4 script on them and move them to my permanant folder and if replace the origianl if it marked for archival
+
+Torrents
+Create provider model that can be used to authenticate and retrieve torrents from for downloader
+Look into using a python torrent client for monitoring and starting torrent downloads for user
+uTorrent, deluge, transmission?
+
+Wishlists
+Users should be able to request a particular "media" and have the system watch the given sources for when that item becomes available. The user should be able to specify if they would like the item to be downloaded immediately or manually. They should also be able to specify if it is a movie what rules are applied to the choosing system.
+
+Choosing System
+We will need a system that verifies if a torrent meets the specifications for download. These rules must be tiered and start at the root of the hirarchy and merge down from there
+
+Example:
+Library Type: "Music or Movies"
+	Format Type: "SD, HD, 720P, 1080P"
+		Asset type: "Asset specific overrides"
+
+Once a torrent has been chosen we need to find a way of certifing the torrent of having the right file type associated with it. If not fallback to convert if option is selected
+
+If download option is auto then start download right away and begin process of monitoring its progress through the pipeline
+
+All movies should include a roubust experience with metadata, ratings, reviews, user_ratings, cover art, description, cast, director, year, resoultion, length, ect.
+
+All tv shows should include the same but with season art, behind the scenes (? and can we just pull this from the web)
+
+All music should be as robust as we can make it. Will have to find external sources for music to get metadata ablum art, lyrics?.
+
+Maybe in the future find a way to add games and apps to the list
+
+
+
+
+
+
+
+API 
+We need a simple yet robust for a myriad of tasks including server-management, assets, events, pipelines ect
+Server Management
+status
+start
+stop
+restart
+
+Assets
+get
+update
+delete
+refresh
+
+events
+refresh_library
+reload_metadata
+?
+
+pipelines
+Maybe we can use celery for this and build a custom pipeline viewer?
+
+
+
+Frontend
+
+management
+plugins
+librarys
+watchers
+assets
+downloads

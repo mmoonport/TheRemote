@@ -1,3 +1,6 @@
+#JetBrains cruft
+.idea/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -55,3 +58,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#sqlite DBs
+*.db

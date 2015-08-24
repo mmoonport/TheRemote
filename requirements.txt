@@ -1,0 +1,6 @@
+peewee
+ipython
+flask
+flask-login
+pywatchman
+twisted

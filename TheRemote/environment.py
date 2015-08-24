@@ -1,3 +1,6 @@
+def get_options(args):
+    return {}
+
 class Env(object):
 
     _appname = 'TheRemote'
@@ -20,3 +23,8 @@ class Env(object):
     _cache_dir = ""
     _db = ""
     _log_path = ""
+
+
+    @staticmethod
+    def setting(name):
+        return name
